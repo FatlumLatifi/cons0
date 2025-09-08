@@ -96,13 +96,13 @@ public struct Zirk
             if (Adressen.Count < 3)
             {
                 url += $"{Adressen[0].GoogleMapsUrl}";
-                return url;
+                return url.Replace(" ","");
             }
             for (int i = 0; i < Adressen.Count - 1; i++)
             {
                 url += $"%7C{Adressen[i].GoogleMapsUrl}";
             }
-            return url;
+            return url.Replace(" ","");
         }
     }
 }
