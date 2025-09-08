@@ -1,0 +1,16 @@
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/cons
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/31.86476.csv
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/cons.deps.json
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/cons.runtimeconfig.json
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/cons.dll
+/home/lum/Desktop/ddir/cons/bin/Debug/net9.0/cons.pdb
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.GeneratedMSBuildEditorConfig.editorconfig
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.AssemblyInfoInputs.cache
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.AssemblyInfo.cs
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.csproj.CoreCompileInputs.cache
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.sourcelink.json
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.dll
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/refint/cons.dll
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.pdb
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/cons.genruntimeconfig.cache
+/home/lum/Desktop/ddir/cons/obj/Debug/net9.0/ref/cons.dll

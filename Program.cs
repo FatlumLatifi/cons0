@@ -3,7 +3,11 @@
 var bezirk = new Bezirk();
 bezirk.ParseAdresses(fs);
 
-foreach(Zirk z in bezirk.Zirke)
+
+using FileStream fs0 = File.Open("31.csv", FileMode.Create, FileAccess.Write);
+using StreamWriter writer = new StreamWriter(fs0);
+foreach (Zirk z in bezirk.Zirke)
 {
-    Console.WriteLine($"Zirk {z.Id} has {z.Adressen.Count} addresses.");
+    writer.WriteLine($"{z.Id},{z.GoogleMapsDirections}");
+    Console.WriteLine($"{z.Id},{z.GoogleMapsDirections}");
 }

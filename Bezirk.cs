@@ -1,5 +1,6 @@
 
 
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 
 public class Bezirk
@@ -46,14 +47,14 @@ public class Bezirk
 
             z.Id = currentZab;
             
-            address.Strasse = strings[1];
+            address.Strasse = strings[1].Trim();
 
             if (strings[2].Contains('-'))
             {
                 ReadOnlySpan<string> hausnummern = strings[2].Split('-');
                 foreach (var hn in hausnummern)
                 {
-                    address.Hausnummer = hn;
+                    address.Hausnummer = hn.Trim();
                     z.Adressen.Add(address);
                 }
             }
@@ -81,6 +82,29 @@ public struct Zirk
     public int Id { get; set; }
 
     public List<Adresse> Adressen { get; set; }
+
+    public string GoogleMapsDirections
+    {
+        get
+        {
+            string url = "https://www.google.com/maps/dir/?api=1&origin=Current+Location";
+
+            url += $"&destination={Adressen[Adressen.Count - 1].GoogleMapsUrl}";
+            url += $"&travelmode=driving&dir_action=navigate";
+
+            url += "&waypoints=";
+            if (Adressen.Count < 3)
+            {
+                url += $"{Adressen[0].GoogleMapsUrl}";
+                return url;
+            }
+            for (int i = 0; i < Adressen.Count - 1; i++)
+            {
+                url += $"%7C{Adressen[i].GoogleMapsUrl}";
+            }
+            return url;
+        }
+    }
 }
 
 
@@ -92,5 +116,7 @@ public struct Adresse
     public string Hausnummer { get; set; }
 
     public int PLZ { get; set; }
+
+    public string GoogleMapsUrl {get { return $"{Strasse.Replace(" ","+")}+{Hausnummer}+{PLZ}"; } }
 
 }
