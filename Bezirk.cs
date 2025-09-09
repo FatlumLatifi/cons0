@@ -117,6 +117,6 @@ public struct Adresse
 
     public int PLZ { get; set; }
 
-    public string GoogleMapsUrl {get { return $"{Strasse.Replace(" ","+")}+{Hausnummer}+{PLZ}"; } }
+    public string GoogleMapsUrl {get { return $"{Strasse.Replace(" ","+")}+{Hausnummer}+{PLZ}".Replace(" ","");; } }
 
 }
